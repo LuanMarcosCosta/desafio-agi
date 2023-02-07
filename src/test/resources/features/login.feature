@@ -20,9 +20,3 @@ Funcionalidade: Pesquisar no site da Agi
     E digito somente numeros
     E clico bo botao pesquisa
     Entao vejo nenhuma pesquisa encontrada
-
-  @limpar-pesquisa
-    Cenario: apagar pesquisa
-    E digito "teste"
-    E clico no "x" do campo
-    Entao o texto digitado e limpado

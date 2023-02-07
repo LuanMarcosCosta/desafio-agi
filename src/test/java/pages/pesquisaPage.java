@@ -15,6 +15,9 @@ public class pesquisaPage {
  private By vBotaoPesquisar = By.xpath("//*[@id=\"masthead\"]/div[1]/div[2]/form/input");
  private By vMensagem = By.xpath("//*[@id=\"primary\"]/header/h1");
 
+ // @pesquisa-incorreta //
+ private By vCampoPesquisaNumero = By.xpath("//*[@id=\"primary\"]/section/header/h1");
+
  public void abreSite(){
   getdriver().manage().window().maximize();
   getdriver().get("https://blogdoagi.com.br/");
@@ -38,6 +41,12 @@ public class pesquisaPage {
  }
 
  // @pesquisa-incorreta //
+ public void preencheComNumeros(String pesquisaNumero){
+  fillField(vCampoPesquisa,pesquisaNumero );
+}
 
+public void verResultadoNegativo(){
+  fillField(vCampoPesquisaNumero, "Nenhum resultado");
+}
 
 }

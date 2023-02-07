@@ -38,16 +38,17 @@ public class pesquisaStep {
 
     @Quando("^digito somente numeros$")
     public void digito_somente_numeros()  {
-
+        pesquisa.preencheComNumeros("1234");
     }
 
     @Quando("^clico bo botao pesquisa$")
     public void clico_bo_botao_pesquisa() {
-
+        pesquisa.cliquePesquisa();
     }
 
     @Entao("^vejo nenhuma pesquisa encontrada$")
     public void vejo_nenhuma_pesquisa_encontrada()  {
-
+        pesquisa.verResultadoNegativo();
     }
+
 }
